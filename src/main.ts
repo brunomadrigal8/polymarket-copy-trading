@@ -1,11 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import GammaAPI from 'odds-analyzer';
+import tradepilot from 'tradepilot';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const gammaApi = GammaAPI();
+  const Tradepilot = tradepilot();
 
   const config = new DocumentBuilder() 
     .setTitle('CTB Copy Trading API')
